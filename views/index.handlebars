@@ -1,0 +1,75 @@
+
+{{!-- Jumbotron header --}}
+<div class="container">
+    <div class="jumbotron" id="jumbo-bg">
+        <h1 class="display-3" id="bobHead">Bob's Delicious Burgers!</h1>
+        <p class="lead">Enter a burger, or eat one that has been posted!</p>
+        <hr class="my-2">
+        <div id="burger-wrapper">
+        <img src="/assets/img/Bobs_burger.jpg" alt="burger" width="200" height="200">
+        </div>
+    </div>
+</div>
+
+{{!-- main content --}}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Burgers that are available!</h2>
+            <hr>
+            <ol>
+                {{#each burgers}}
+                {{#unless devoured}}
+                <div class="row burger">
+                    <h5>{{id}}. {{burger_name}}</h5>
+                    <button type="submit" class="devourBtn btn-secondary btn" data-id="{{id}}"
+                        data-devoured="{{devoured}}">
+                        Devour
+                    </button>
+                </div>
+                {{/unless}}
+                {{/each}}
+            </ol>
+        </div>
+        <div class="col-md-6">
+            <h2>Burgers that have been eaten!</h2>
+            <hr>
+            <ol>
+                {{#each burgers}}
+                {{#if devoured}}
+                <div class="row burger">
+                    <h5>{{id}}. {{burger_name}}</h5>
+                </div>
+                {{/if}}
+                {{/each}}
+            </ol>
+        </div>
+    </div>
+    </div>
+</div>
+
+{{!-- divider --}}
+<div class="container">
+ <div class="row" id="divider">
+     
+</div>   
+</div>
+
+
+{{!-- Form --}}
+<div id="form-container" class="container">
+    <div class="row">
+        <h2>Add a Burger</h2>
+    </div>
+    <div class="row">
+
+        <form class="create-form" autocomplete="off">
+
+            <div class="form-group">
+                <input type="text" id="bName" name="name" class="form-control-lg" placeholder="Enter Burger Name!">
+            </div>
+
+            <button type="submit" class="btn btn-lg btn-dark">Add Burger</button>
+        </form>
+    </div>
+</div>

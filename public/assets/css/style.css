@@ -1,0 +1,48 @@
+#jumbo-bg{
+    background: yellow;
+    border: 10px solid red;
+    padding-bottom: 15px;
+    margin-top: 10px;
+}
+
+#jumbo-bg *{
+    color: red;
+}
+
+#burger-wrapper{
+    text-align: center;
+}
+
+#main-body{
+    background: rgb(129, 243, 129);
+}
+
+#bobHead{
+    font-weight: 700;
+}
+
+@media screen and (max-width: 767px){
+    #bobHead{
+        font-weight: 400;
+        font-size: 2rem;
+    }
+}
+
+.devourBtn{
+    margin-left: 15px;
+    
+}
+
+#form-container{
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.burger{
+    margin-top: 10px;
+}
+
+#divider{
+    background: red;
+    height: 5px;
+}
